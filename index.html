@@ -43,7 +43,119 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body>
   
@@ -152,6 +264,13 @@
 
     
       
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/tutorial/" rel="tag">tutorial</a></li></ul>
+    </div>
+  </div>
+
 
     
   </div>
@@ -173,7 +292,7 @@
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/03/13/H%20%E6%B8%85%E9%99%A4%E9%9A%9C%E7%A2%8D/">无标题</a>
+        <a class="p-name article-title" href="/2025/03/14/H%20%E6%B8%85%E9%99%A4%E9%9A%9C%E7%A2%8D/">H 清除障碍</a>
       </h1>
     
   
@@ -181,7 +300,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-03-13T15:29:42.513Z" itemprop="datePublished">2025-03-13</time>
+  <time class="dt-published" datetime="2025-03-13T16:00:00.000Z" itemprop="datePublished">2025-03-14</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -192,24 +311,27 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.1k 词 
+            1.3k 词 
           </div>
         </div>
         
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/" rel="tag">tutorial</a></li></ul>
+
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              H 清除障碍
+              
 标签：差分
 
-我们用 $a_i$ 来表示第 $i-1$ 千米到第 $i$ 千米这一段上障碍的数量（特殊的，我们设 $a_0$ 是 $0$），令 $d_i=a_i-a_{i-1}$ 。 下面是一个例子：
+我们用  来表示第
+ 千米到第 
+千米这一段上障碍的数量（特殊的，我们设  是 ），令  。 下面是一个例子：
 
 
 
 
-$i$
 1
 2
 3
@@ -220,7 +342,7 @@ $i$
 
 
 
-$a_i$
+
 0
 1
 2
@@ -229,7 +351,7 @@ $a_i$
 0
 
 
-$d_i$
+
 0
 1
 1
@@ -239,17 +361,24 @@ $d_i$
 
 
 
-
-可以将 $d_i$ 直观地理解为上下坡的跨度。且有：
-
-\begin{align*}
-\sum_{i=1}^{n}d_i&=(a_1-a_0)+(a_2-a_1)+\dots+(a_n-a_{n-1})\\
-&=a_n-a_0\\
-&=a_n
-\end{align*}也就是说，$d_i$ 的前缀和就是 $a_i$ 的值。这样一来，当我们有了 $\{d_n\}$ ，我们可以通过计算前缀和反推出 $\{a_n\}$ 。
-下面考虑，如果让上图中 $a_2$ 到 $a_3$ 这一段，也就是 $1$ 到 $3$ 千米上的障碍 $+1$ ，哪几个 $d_i$ 会改变？怎么改变？
+可以将 
+直观地理解为上下坡的跨度。且有：  也就是说，
+的前缀和就是 
+的值。这样一来，当我们有了 
+，我们可以通过计算前缀和反推出  。
+下面考虑，如果让上图中  到
+ 这一段，也就是  到  千米上的障碍  ，哪几个  会改变？怎么改变？
 亲手模拟，我们可以知道——
-改变后，各项数值中只有 $d_2$ 和 ...
+改变后，各项数值中只有  和
+ 发生了变化。其中  增大 ， 减小  。
+这其实很好理解，因为：
+ ， 。所以  。
+ ， 。所以  。
+ ， 。所以  。
+（箭头表示增大/不变/减小）
+这启示我们，对区间  上的
+ 做修改，可以通过对  和  做单点修改，然后对  做前缀和来完成。
+具体地，这道题中我们会在每次循环中读入  和  ，由于表示的是第  到第  千米这一段上...
             
           </div>
         
@@ -261,7 +390,7 @@ $d_i$
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/03/13/H%20%E6%B8%85%E9%99%A4%E9%9A%9C%E7%A2%8D/" 
+      href="/2025/03/14/H%20%E6%B8%85%E9%99%A4%E9%9A%9C%E7%A2%8D/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -320,6 +449,7 @@ $d_i$
           <div class="truncate-text">
             
               
+
             
           </div>
         
@@ -389,14 +519,23 @@ $d_i$
         
           <div class="truncate-text">
             
-              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+              Welcome to Hexo! This is your very
+first post. Check documentation for
+more info. If you get any problems when using Hexo, you can find the
+answer in troubleshooting or
+you can ask me on GitHub.
+Quick Start
+Create a new post
+1$ hexo new "My New Post"
 More info: Writing
-Run server1$ hexo server
+Run server
+1$ hexo server
 More info: Server
-Generate static files1$ hexo generate
+Generate static files
+1$ hexo generate
 More info: Generating
-Deploy to remote sites1$ hexo deploy
+Deploy to remote sites
+1$ hexo deploy
 More info: Deployment
 
             
