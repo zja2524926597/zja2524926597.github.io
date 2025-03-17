@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
       <div class="category-box">
             <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">
                 题解
-                <div class="category-count">1</div>
+                <div class="category-count">2</div>
             </a>
         </div>
     </div>
@@ -283,6 +283,87 @@ mjx-container[display="true"] + br {
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-春训-1题解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/03/17/%E6%98%A5%E8%AE%AD-1%E9%A2%98%E8%A7%A3/">春训#1题解</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-03-17T13:35:57.000Z" itemprop="datePublished">2025-03-17</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            5.3k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              A
+合法的数字最高位一定不为 
+，这也就意味着低位只能全部为 
+（如果有低位的话）。因此只需将最高位加一，其余位归零即可。
+Code：
+1234567void solve() {    n = read();    int res = 1;    while (n / res &gt;= 10) res *= 10;    int ans = ( n / res + 1 ) * res - n;    cout &lt;&lt; ans &lt;&lt; '\n';}
+B
+要求的方案数就是：全部的方案数 
+所有三元组和均为  的方案数。
+由于对于每个三元组而言，总方案数是  ，和为  的方案数是  ，故最终答案为 。
+Code：
+1234567void solve() {    n = read();    int ans1 = 1, ans2 = 1;    FOR(i, 1, n) ans1 = ans1 * 7 % MOD;    FOR(i, 1, n * 3) ans2 = ans2 * 3 % MOD;    cout &lt;&lt; (ans...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/03/17/%E6%98%A5%E8%AE%AD-1%E9%A2%98%E8%A7%A3/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
