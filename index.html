@@ -187,6 +187,8 @@ mjx-container[display="true"] + br {
     
       <a class="main-nav-link" href="/archives">Archives</a>
     
+      <a class="main-nav-link" href="/categories">Categories</a>
+    
   </nav>
   <nav id="sub-nav">
     <a id="theme-btn" class="nav-icon">
@@ -209,6 +211,8 @@ mjx-container[display="true"] + br {
       <a class="nav-dropdown-link" href="/">Home</a>
     
       <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/categories">Categories</a>
     
     
       <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
@@ -312,7 +316,7 @@ mjx-container[display="true"] + br {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            6.6k 词 
+            6.7k 词 
           </div>
         </div>
         
@@ -321,18 +325,21 @@ mjx-container[display="true"] + br {
         
           <div class="truncate-text">
             
-              A题目大意：规定每一位采用的进制。求十进制数在该进制下的表示。
+              A
+题目大意：规定每一位采用的进制。求十进制数在该进制下的表示。
 难度：~900
 按照题意，模拟进位的过程即可。（注意要求输出前导零）
 Code:
 12345678910111213void solve() {    string s;     cin &gt;&gt; n &gt;&gt; m;    cin &gt;&gt; s &gt;&gt; m;    for (int i = n - 1; i &gt;= 0; i--) {        int cur = s[i] - '0';        ans[i] = m % cur;        m /= cur;    }    for (int i = 0; i &lt; n; i++) {        cout &lt;&lt; ans[i];    }}
-B题目大意：构造含  至  各两次的排列，以最小化  的值，其中  是排列中两个  之间的距离。
+B
+题目大意：构造含  至  各两次的排列，以最小化 
+的值，其中  是排列中两个  之间的距离。
 难度：1900
-显然  放的位置不改变答案。因此考虑最后放。
+显然 
+放的位置不改变答案。因此考虑最后放。
 考虑构造   的方案， 为奇数和偶数时，分别如下（以  为例）。
 
-
-将奇数偶数聚在一起放置，最后空...
+...
             
           </div>
         
@@ -393,7 +400,7 @@ B题目大意：构造含  至  各两次的排列，以最小化  的值，其�
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            5.5k 词 
+            5.6k 词 
           </div>
         </div>
         
@@ -402,17 +409,24 @@ B题目大意：构造含  至  各两次的排列，以最小化  的值，其�
         
           <div class="truncate-text">
             
-              A题目大意：找到下一个只有一位不为  的数。
+              A
+题目大意：找到下一个只有一位不为  的数。
 难度：900
-合法的数字最高位一定不为  ，这也就意味着低位只能全部为  （如果有低位的话）。因此只需将最高位加一，其余位归零即可。
+合法的数字最高位一定不为 
+，这也就意味着低位只能全部为 
+（如果有低位的话）。因此只需将最高位加一，其余位归零即可。
 Code：
 1234567void solve() {    n = read();    int res = 1;    while (n / res &gt;= 10) res *= 10;    int ans = ( n / res + 1 ) * res - n;    cout &lt;&lt; ans &lt;&lt; '\n';}
-B题目大意：现有  个取值 ， 或  的三元组。存在和不为  的三元组的方案被视为合法方案。求合法方案数。
+B
+题目大意：现有  个取值 ，
+或  的三元组。存在和不为 
+的三元组的方案被视为合法方案。求合法方案数。
 难度：1500
-要求的方案数就是：全部的方案数  所有三元组和均为  的方案数。
+要求的方案数就是：全部的方案数 
+所有三元组和均为  的方案数。
 由于对于每个三元组而言，总方案数是  ，和为  的方案数是  ，故最终答案为 。
 Code：
-1234567void solve() {    n = read();    int ans1 = 1, ans2 = 1;    FOR(i, 1, n) ans1 = ans...
+1234567void solve() {    n = read();    int ans1 = 1, ans2 = 1;    FOR(...
             
           </div>
         
