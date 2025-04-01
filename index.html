@@ -316,7 +316,7 @@ mjx-container[display="true"] + br {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            6.7k 词 
+            6.6k 词 
           </div>
         </div>
         
@@ -325,21 +325,18 @@ mjx-container[display="true"] + br {
         
           <div class="truncate-text">
             
-              A
-题目大意：规定每一位采用的进制。求十进制数在该进制下的表示。
+              A题目大意：规定每一位采用的进制。求十进制数在该进制下的表示。
 难度：~800
 按照题意，模拟进位的过程即可。（注意要求输出前导零）
 Code:
 12345678910111213void solve() {    string s;     cin &gt;&gt; n &gt;&gt; m;    cin &gt;&gt; s &gt;&gt; m;    for (int i = n - 1; i &gt;= 0; i--) {        int cur = s[i] - '0';        ans[i] = m % cur;        m /= cur;    }    for (int i = 0; i &lt; n; i++) {        cout &lt;&lt; ans[i];    }}
-B
-题目大意：构造含  至  各两次的排列，以最小化 
-的值，其中  是排列中两个  之间的距离。
+B题目大意：构造含  至  各两次的排列，以最小化  的值，其中  是排列中两个  之间的距离。
 难度：1900
-显然 
-放的位置不改变答案。因此考虑最后放。
+显然  放的位置不改变答案。因此考虑最后放。
 考虑构造   的方案， 为奇数和偶数时，分别如下（以  为例）。
 
-...
+
+将奇数偶数聚在一起放置，最后空...
             
           </div>
         
