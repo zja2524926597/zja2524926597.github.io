@@ -2998,3 +2998,11 @@ input[type="range"] {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.busuanzi-inline {
+  color: #777;
+  font-size: 0.9em;
+}
+.busuanzi-inline i {
+  margin-right: 4px;
+  color: #888;
+}
