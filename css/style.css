@@ -3013,3 +3013,10 @@ input[type="range"] {
   vertical-align: middle;
   display: inline-block;
 }
+.theme-sensitive-icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
