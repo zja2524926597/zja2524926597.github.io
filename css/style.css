@@ -3006,3 +3006,10 @@ input[type="range"] {
   margin-right: 4px;
   color: #888;
 }
+.social-img-icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
