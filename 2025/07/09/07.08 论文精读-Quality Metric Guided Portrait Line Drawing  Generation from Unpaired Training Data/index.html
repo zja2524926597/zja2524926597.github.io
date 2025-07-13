@@ -28,12 +28,12 @@
 <meta property="og:site_name" content="Istina&#39;s Blog">
 <meta property="og:description" content="07.08 论文精读-Quality Metric Guided Portrait Line Drawing Generation from Unpaired Training Data（引入画面评价体系的-基于非成对训练数据的-人像线稿生成模型）  0.摘要 现有的线稿生成模型往往基于 成对的（paired） 训练数据，成本较高。我们的模型基于 非成对 数据，且有以下两个特征：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zja2524926597.github.io/2025/07/09/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20%20Generation%20from%20Unpaired%20Training%20Data/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20Generation%20from%20Unpaired%20Training%20Data/pic1.png">
+<meta property="og:image" content="https://zja2524926597.github.io/2025/07/09/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20%20Generation%20from%20Unpaired%20Training%20Data/pic1.png">
 <meta property="article:published_time" content="2025-07-09T13:06:19.000Z">
-<meta property="article:modified_time" content="2025-07-13T05:19:15.082Z">
+<meta property="article:modified_time" content="2025-07-13T14:49:14.540Z">
 <meta property="article:author" content="Ethan Zhou">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zja2524926597.github.io/2025/07/09/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20%20Generation%20from%20Unpaired%20Training%20Data/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20Generation%20from%20Unpaired%20Training%20Data/pic1.png">
+<meta name="twitter:image" content="https://zja2524926597.github.io/2025/07/09/07.08%20%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20%20Generation%20from%20Unpaired%20Training%20Data/pic1.png">
   
     <link rel="alternate" href="/atom.xml" title="Istina's Blog" type="application/atom+xml">
   
@@ -462,7 +462,7 @@ code）</strong>的方法，生成数据中没有的新风格。</li>
 <p>由于严格循环一致性约束会导致网络嵌入重建信息，影响优化目标，最终导致面部特征缺失，我们仅保留照片
 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container></span>
 线稿的一致性要求，称为非对称循环结构。这样做释放了生成器的自由度。</p>
-<p><img src="07.08%20论文精读-Quality%20Metric%20Guided%20Portrait%20Line%20Drawing%20Generation%20from%20Unpaired%20Training%20Data\pic1.png"></p>
+<p><img src="pic1.png"></p>
 <p>各部分具体的工作原理如下：</p>
 <p><strong>G：照片<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container></span> 线稿
 （带残差模块的编码-解码网络）</strong></p>
