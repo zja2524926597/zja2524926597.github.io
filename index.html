@@ -296,7 +296,7 @@ mjx-container[display="true"] + br {
         
             <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">
                 题解
-                <div class="category-count">5</div>
+                <div class="category-count">7</div>
             </a>
         </div>
     </div>
@@ -326,7 +326,7 @@ mjx-container[display="true"] + br {
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/24/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/">无标题</a>
+        <a class="p-name article-title" href="/2025/07/25/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/">暑训#3补题.md</a>
       </h1>
     
   
@@ -334,12 +334,12 @@ mjx-container[display="true"] + br {
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-24T13:23:55.785Z" itemprop="datePublished">2025-07-24</time>
+  <time class="dt-published" datetime="2025-07-25T15:45:36.000Z" itemprop="datePublished">2025-07-25</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-    未分类 
+  <a class="meta-cate-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
    
 </div>
   
@@ -387,7 +387,7 @@ mjx-container[display="true"] + br {
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/07/24/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/" 
+      href="/2025/07/25/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -472,6 +472,90 @@ Co...
     <a class="right-panel  non-pic  "
       
       href="/2025/07/16/%E6%9A%91%E8%AE%AD#1%E8%A1%A5%E9%A2%98/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-暑训#3补题 (2)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/16/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98%20(2)/">暑训#1补题.md</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-16T03:32:25.000Z" itemprop="datePublished">2025-07-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            5.5k 词 
+          </div>
+          <div class="need-seperator meta-info">
+            <span id="busuanzi_container_page_pv" class="post-meta-item busuanzi-inline">
+              <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+            </span>
+          </div>          
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              我承认开训前确实摆了太久，第一场训练赛根本没有进入状态。那么就从今天开始抑制惰性，好好训练吧！
+L
+题目大意： 给定  个正整数  和  次询问。每次询问给定 , ，修改：，（修改在后续询问中也生效）然后你需要统计此时有多少  满足：大于  的数的数目不小于 。 难度： ~2000 知识点： 权值线段树 / 平衡树
+为了方便叙述，我们重新定义中位数为升序排序后的 。（也就是说在  为偶数时不取均值）
+容易发现，小于中位数的元素一定符合统计要求，大于中位数的元素一定不符合统计要求。等于中位数的元素满足以下要求时符合：升序排序后，  。
+因此我们只需寻找一种数据结构支持以下操作：单点修改、查询给定下标的元素、查询小于某数的元素个数。各种数据结构都可以，这里就写一个权值线段树吧。
+先离线对所有可能出现的数进行离散化，作为线段树的值域。线段树维护值域上各数的出现次数，各操作如下。
+单点修改 ：原数出现次数--，新数出现次数++； 查询给定下标的元素 ：线段树上二分即可； 查询小于某数的元素个数 ：其实就是做区间查询；
+好像确实什么难度。但为什么赛时没切？有点无语。
+Co...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/16/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98%20(2)/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
