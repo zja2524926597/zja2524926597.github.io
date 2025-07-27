@@ -289,14 +289,14 @@ mjx-container[display="true"] + br {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">
-                题解
-                <div class="category-count">4</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/">
                 游戏记录
                 <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">
+                题解
+                <div class="category-count">5</div>
             </a>
         </div>
     </div>
@@ -312,6 +312,181 @@ mjx-container[display="true"] + br {
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-暑训#3补题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/24/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/">无标题</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-24T13:23:55.785Z" itemprop="datePublished">2025-07-24</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            5.6k 词 
+          </div>
+          <div class="need-seperator meta-info">
+            <span id="busuanzi_container_page_pv" class="post-meta-item busuanzi-inline">
+              <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+            </span>
+          </div>          
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              C
+题目大意： 给定一个由小写字母构成的字符串和若干次修改操作。在每次修改后，求其符合以下要求的最大子串长度：出现奇数次的字母有奇数个，出现非零偶数次的字母有偶数个。
+难度： ~2000 知识点： 线段树，分类讨论
+观察可以得到，要求等价于：串长和字符集大小都为奇数。这一点可以通过枚举串长和字符集大小各自的奇偶性来验证。
+然后进行分类讨论。
+
+当字符集大小为奇数时：
+
+如果串长为奇数：直接取原串即可。
+如果串长为偶数：
+
+如果首或尾字母出现了超过一次，那么删去它不改变字符集大小，但让串长变为奇数，符合了要求。
+如果首尾字母都只出现了一次，我们正序和倒序分别找到第一个出现多次的字母。为了方便下文叙述，我们不妨设原串形如 [abcd X ... Y uvw]，其中小/大写字母分别代表出现一/多次的字母。
+那么如果我们只删去头尾的若干字母，字符集大小和串长的奇偶性一定同时改变，不可能同时变为奇数。因此，我们至少需要删到串中的 X 或 Y 。
+
+如果删去的串长为奇数（如 [abcdX]），则剩下的串长和字符集大小都为奇数，符合了要求。
+如果删去的串长为偶数...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/24/%E6%9A%91%E8%AE%AD#3%E8%A1%A5%E9%A2%98/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-暑训#1补题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/16/%E6%9A%91%E8%AE%AD#1%E8%A1%A5%E9%A2%98/">暑训#1补题.md</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-16T03:32:25.000Z" itemprop="datePublished">2025-07-16</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            5.5k 词 
+          </div>
+          <div class="need-seperator meta-info">
+            <span id="busuanzi_container_page_pv" class="post-meta-item busuanzi-inline">
+              <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+            </span>
+          </div>          
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              我承认开训前确实摆了太久，第一场训练赛根本没有进入状态。那么就从今天开始抑制惰性，好好训练吧！
+L
+题目大意： 给定  个正整数  和  次询问。每次询问给定 , ，修改：，（修改在后续询问中也生效）然后你需要统计此时有多少  满足：大于  的数的数目不小于 。 难度： ~2000 知识点： 权值线段树 / 平衡树
+为了方便叙述，我们重新定义中位数为升序排序后的 。（也就是说在  为偶数时不取均值）
+容易发现，小于中位数的元素一定符合统计要求，大于中位数的元素一定不符合统计要求。等于中位数的元素满足以下要求时符合：升序排序后，  。
+因此我们只需寻找一种数据结构支持以下操作：单点修改、查询给定下标的元素、查询小于某数的元素个数。各种数据结构都可以，这里就写一个权值线段树吧。
+先离线对所有可能出现的数进行离散化，作为线段树的值域。线段树维护值域上各数的出现次数，各操作如下。
+单点修改 ：原数出现次数--，新数出现次数++； 查询给定下标的元素 ：线段树上二分即可； 查询小于某数的元素个数 ：其实就是做区间查询；
+好像确实什么难度。但为什么赛时没切？有点无语。
+Co...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/16/%E6%9A%91%E8%AE%AD#1%E8%A1%A5%E9%A2%98/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
@@ -359,32 +534,20 @@ mjx-container[display="true"] + br {
         
           <div class="truncate-text">
             
-              07.08
-论文精读-Quality Metric Guided Portrait Line Drawing Generation from
-Unpaired Training
-Data（引入画面评价体系的-基于非成对训练数据的-人像线稿生成模型）
+              07.08 论文精读-Quality Metric Guided Portrait Line Drawing Generation from Unpaired Training Data（引入画面评价体系的-基于非成对训练数据的-人像线稿生成模型）
 
 0.摘要
-现有的线稿生成模型往往基于 成对的（paired）
-训练数据，成本较高。我们的模型基于 非成对
-数据，且有以下两个特征：
+现有的线稿生成模型往往基于 成对的（paired） 训练数据，成本较高。我们的模型基于 非成对 数据，且有以下两个特征：
 
-能用同 一个网络 生成 不同风格
-的线稿
+能用同 一个网络 生成 不同风格 的线稿
 能生成训练数据中没有出现过的 新风格
 
 我们的工作是：
 
-提出一种 画面质量评价指标（quality metric）
-（从人类感知学习而来）
-引入 损失函数（quality loss）
-来引导网络生成更好看的线稿
+提出一种 画面质量评价指标（quality metric） （从人类感知学习而来）
+引入 损失函数（quality loss） 来引导网络生成更好看的线稿
 
-现有的 CycleGAN 常在全图嵌入不可见的 重建信息（reconstruction
-information） ，使关键面部信息丢失。我们提出
-非对称循环映射策略（asymmetric cycle mapping）
-，使重建信息可见且只放置在面部特定区域。此外，我们引入 localized
-dis...
+现有的 CycleGAN 常在全图嵌入不可见的 重建信息（reconstruction information） ，使关键面部信息丢失。我们提出 非对称循环映射策略（asymmetric cycle mapping） ，使重建信息可见且只放置在面部特定区域。此外，我们引入 localized discriminators ...
             
           </div>
         
@@ -460,24 +623,17 @@ dis...
           <div class="truncate-text">
             
               前言
-听说下半年 FM26 要出了，到时候我可能也就会弃坑这玩了很久的 FM23
-了。正好下半年利兹联（Leeds）升超，我决定最后为白玫瑰开个长线的档纪念一下。
-众所周知，FM23 中游戏是从 22
-年夏窗开始的。那个夏天前的赛季，利兹联最终仅以三分的优势领先于降级区的伯恩利，免于重新落回英冠的命运。
-这让许多人感到失望，毕竟一年前的 20-21
-赛季，他们还以升班马的身份拿下了一个中游的名次。人们都在说，在英超站稳脚跟好像也没那么难。球迷们已经在幻想俱乐部在英超光明的未来。只是梦碎得太快。
-后来的事情我们都知道了。22-23
-赛季（也就是我存档的起点）末，利兹联位居
-19，重新掉回英冠。上赛季堪堪保级的 17 名和这次的 19
-名本身差得就并不多，在崇尚 “逆水行舟，不进则退” 的英超更是如此。
+听说下半年 FM26 要出了，到时候我可能也就会弃坑这玩了很久的 FM23 了。正好下半年利兹联（Leeds）升超，我决定最后为白玫瑰开个长线的档纪念一下。
+众所周知，FM23 中游戏是从 22 年夏窗开始的。那个夏天前的赛季，利兹联最终仅以三分的优势领先于降级区的伯恩利，免于重新落回英冠的命运。
+这让许多人感到失望，毕竟一年前的 20-21 赛季，他们还以升班马的身份拿下了一个中游的名次。人们都在说，在英超站稳脚跟好像也没那么难。球迷们已经在幻想俱乐部在英超光明的未来。只是梦碎得太快。
+后来的事情我们都知道了。22-23 赛季（也就是我存档的起点）末，利兹联位居 19，重新掉回英冠。上赛季堪堪保级的 17 名和这次的 19 名本身差得就并不多，在崇尚 “逆水行舟，不进则退” 的英超更是如此。
 FM的世界线里利兹联的命运会是怎样呢？且看本文。
 
 球队阵容
 先给大伙看看这套阵容班底吧。整体CA不算高，绝大部分球员的CA在130-140左右，但在关键位置有许多不错的球员。
 
-主力中锋 巴姆弗德
-把握机会能力不佳，CA139，得分不稳定。
-边锋...
+主力中锋 巴姆弗德 把握机会能力不佳，CA139，得分不稳定。
+边锋位置的候选主要...
             
           </div>
         
@@ -563,8 +719,7 @@ A
 标签：小学数学
 我认为将小学二年级数学题放在大学生竞赛里是不妥的。所以我认真思考了很久哪里有坑。
 但事实上这就是一道小学二年级数学题，无语了家人们。
-注意到有 ，，
-，所以答...
+注意到有 ，， ，所以答案...
             
           </div>
         
@@ -640,12 +795,9 @@ A
           <div class="truncate-text">
             
               前言
-做下来的体感是，涉及的知识点比较基础，但需要写的细节并不少。难度略高于
-CSP-J，低于 NOIP/CSP-S。
-我给出的难度排序大致是：A&lt;C&lt;B=D&lt;G&lt;E&lt;F&lt;H，比较令人恶心的是E和F会爆
-long long，考场上我肯定无情挂分。
-H题初见没有明确的思路，写的玄学复杂度做法只有
-20pts。不是一道好做的题。
+做下来的体感是，涉及的知识点比较基础，但需要写的细节并不少。难度略高于 CSP-J，低于 NOIP/CSP-S。
+我给出的难度排序大致是：A&lt;C&lt;B=D&lt;G&lt;E&lt;F&lt;H，比较令人恶心的是E和F会爆 long long，考场上我肯定无情挂分。
+H题初见没有明确的思路，写的玄学复杂度做法只有 20pts。不是一道好做的题。
 只剩一个礼拜了，很难针对蓝桥杯的风格做专项复习了，稍微复习复习图论/数据结构的板子吧，再切几道推柿子题找找感觉，剩下的听天由命辽。
 A
 标签： 枚举
@@ -653,12 +805,10 @@ A
 Code: 略。
 B
 标签： DFS
-笔者一开始考虑的错误做法是：枚举 
-个白子的位置，再判断是否为平局。复杂度是阶乘级别，难以在短时间内得到结果。
-于是转变思路，考虑到平局要求棋盘被填满，那么最终状态一共只有  种，时间可以接受。
-直接枚举并判断每种情形是否符合平局标准（白子数目为 ，且不存在横、竖、斜连成一线）
+笔者一开始考虑的错误做法是：枚举  个白子的位置，再判断是否为平局。复杂度是阶乘级别，难以在短时间内得到结果。
+于是转变思路，考虑到平局要求棋盘被填满，那么最终状态一共只有  种，时间可以接受。 直接枚举并判断每种情形是否符合平局标准（白子数目为 ，且不存在横、竖、斜连成一线）
 Code:
-123456789101112131415161718192...
+12345678910111213141516171819202122...
             
           </div>
         
@@ -689,7 +839,7 @@ Code:
    
 
 
-<article id="post-春训-2题解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-春训#2题解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -700,7 +850,7 @@ Code:
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/04/01/%E6%98%A5%E8%AE%AD-2%E9%A2%98%E8%A7%A3/">春训#2题解</a>
+        <a class="p-name article-title" href="/2025/04/01/%E6%98%A5%E8%AE%AD#2%E9%A2%98%E8%A7%A3/">春训#2题解</a>
       </h1>
     
   
@@ -734,19 +884,17 @@ Code:
           <div class="truncate-text">
             
               A
-题目大意：
-规定每一位采用的进制。求十进制数在该进制下的表示。
+题目大意： 规定每一位采用的进制。求十进制数在该进制下的表示。
 难度： ~900
 按照题意，模拟进位的过程即可。（注意要求输出前导零）
 Code:
 12345678910111213void solve() {    string s;     cin &gt;&gt; n &gt;&gt; m;    cin &gt;&gt; s &gt;&gt; m;    for (int i = n - 1; i &gt;= 0; i--) {        int cur = s[i] - '0';        ans[i] = m % cur;        m /= cur;    }    for (int i = 0; i &lt; n; i++) {        cout &lt;&lt; ans[i];    }}
 B
-题目大意： 构造含  至  各两次的排列，以最小化 
-的值，其中  是排列中两个  之间的距离。
+题目大意： 构造含  至  各两次的排列，以最小化  的值，其中  是排列中两个  之间的距离。
 难度： 1900
-显然 
-放的位置不改变答案。因此考虑最后放。
-考虑构造   的方案， 为奇数和偶数时，分别如下（以  为例）...
+显然  放的位置不改变答案。因此考虑最后放。
+考虑构造   的方案， 为奇数和偶数时，分别如下（以  为例）。
+...
             
           </div>
         
@@ -758,7 +906,7 @@ B
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/04/01/%E6%98%A5%E8%AE%AD-2%E9%A2%98%E8%A7%A3/" 
+      href="/2025/04/01/%E6%98%A5%E8%AE%AD#2%E9%A2%98%E8%A7%A3/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -777,7 +925,7 @@ B
    
 
 
-<article id="post-春训-1题解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-春训#1题解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -788,7 +936,7 @@ B
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/03/17/%E6%98%A5%E8%AE%AD-1%E9%A2%98%E8%A7%A3/">春训#1题解</a>
+        <a class="p-name article-title" href="/2025/03/17/%E6%98%A5%E8%AE%AD#1%E9%A2%98%E8%A7%A3/">春训#1题解</a>
       </h1>
     
   
@@ -823,21 +971,16 @@ B
             
               A
 难度： 900
-合法的数字最高位一定不为 
-，这也就意味着低位只能全部为 
-（如果有低位的话）。因此只需将最高位加一，其余位归零即可。
+合法的数字最高位一定不为  ，这也就意味着低位只能全部为  （如果有低位的话）。因此只需将最高位加一，其余位归零即可。
 Code：
 1234567void solve() {    n = read();    int res = 1;    while (n / res &gt;= 10) res *= 10;    int ans = ( n / res + 1 ) * res - n;    cout &lt;&lt; ans &lt;&lt; '\n';}
 B
-题目大意： 现有  个取值 ，
-或  的三元组。存在和不为 
-的三元组的方案被视为合法方案。求合法方案数。
+题目大意： 现有  个取值 ， 或  的三元组。存在和不为  的三元组的方案被视为合法方案。求合法方案数。
 难度： 1500
-要求的方案数就是：全部的方案数 
-所有三元组和均为  的方案数。
+要求的方案数就是：全部的方案数  所有三元组和均为  的方案数。
 由于对于每个三元组而言，总方案数是  ，和为  的方案数是  ，故最终答案为 。
 Code：
-1234567void solve() {    n = read();    int ans1 = 1, ans2 = 1;    FOR(i, 1, n) ans1 = ans1...
+1234567void solve() {    n = read();    int ans1 = 1, ans2 = 1;    FOR(i, 1, n) ans1 = ans1 * 7 ...
             
           </div>
         
@@ -849,7 +992,7 @@ Code：
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/03/17/%E6%98%A5%E8%AE%AD-1%E9%A2%98%E8%A7%A3/" 
+      href="/2025/03/17/%E6%98%A5%E8%AE%AD#1%E9%A2%98%E8%A7%A3/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
